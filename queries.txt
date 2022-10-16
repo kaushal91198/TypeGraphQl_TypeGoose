@@ -1,0 +1,61 @@
+1. Create user
+- Query
+mutation createUser($input: CreateUserInput!){
+    createUser(input: $input) {
+      email
+      _id
+      name
+    }
+  }
+
+- Input
+  {
+  "input": {
+    "email": "1@example.com",
+    "name": "Jane Doe",
+    "password": "password"
+  }
+}
+
+2. Login
+- Query
+mutation login($input: LoginInput!){
+  login(input: $input) 
+}
+
+ - Input
+{
+  "input": {
+    "email": "kaushal91198@gmail.com",
+    "password": "Gopi@#2016"
+  }}
+
+
+3. user data
+query{
+  me{
+    _id,
+    name,
+    email
+  }
+}
+
+4. create the product
+
+mutation createProduct($input: CreateProductInput!){
+    createProduct(input: $input) {
+      _id
+      name
+      price
+       productId
+      description
+    }
+  }
+
+  {
+  "input": {
+    "name": "A test Product",
+    "description": "Blahhhhhhhhhhhhhhhhhhh blahhhhh"
+    "price":24.99
+  }}
+
